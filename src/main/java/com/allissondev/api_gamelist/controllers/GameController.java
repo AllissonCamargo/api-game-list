@@ -1,7 +1,7 @@
 package com.allissondev.api_gamelist.controllers;
 
 import com.allissondev.api_gamelist.dto.GameMinDTO;
-import com.allissondev.api_gamelist.entities.Game;
+
 import com.allissondev.api_gamelist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
