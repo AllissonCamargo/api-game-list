@@ -1,10 +1,12 @@
 package com.allissondev.api_gamelist.controllers;
 
+import com.allissondev.api_gamelist.dto.GameDTO;
 import com.allissondev.api_gamelist.dto.GameMinDTO;
 
 import com.allissondev.api_gamelist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,4 +23,9 @@ public class GameController {
     public List<GameMinDTO> findAll() {
         return gameService.findAll();
     }
+    @GetMapping("/{id}")
+    public GameDTO findById (@PathVariable Long id) {
+        return gameService.findById(id);
+    }
+
 }
